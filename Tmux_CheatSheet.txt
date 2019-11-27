@@ -1,0 +1,40 @@
+# session management
+tmux ls (or tmux list-sessions)
+tmux new -s session-name
+ctrl-a d Detach from session
+tmux attach -t [session name]
+tmux kill-session -t session-name
+
+ctrl-a c Create new window
+ctrl-a d Detach current client
+ctrl-a l Move to previously selected window
+ctrl-a n Move to the next window
+ctrl-a p Move to the previous window
+ctrl-a & Kill the current window
+ctrl-a , Rename the current window
+ctrl-a q Show pane numbers (used to switch between panes)
+ctrl-a o Switch to the next pane
+ctrl-a ? List all keybindings
+
+# moving between windows
+ctrl-a n (Move to the next window)
+ctrl-a p (Move to the previous window)
+ctrl-a l (Move to the previously selected window)
+ctrl-a w (List all windows / window numbers)
+ctrl-a window number (Move to the specified window number, the
+default bindings are from 0 -- 9)
+
+# Tiling commands
+ctrl-a % (Split the window vertically)
+ctrl-a " (Split window horizontally)
+ctrl-a o (Goto next pane)
+ctrl-a q (Show pane numbers, when the numbers show up type the key to go to that pane)
+ctrl-a { (Move the current pane left)
+ctrl-a } (Move the current pane right)
+
+# Make a pane its own window
+ctrl-a : "break-pane"
+
+# add to ~/.tmux.conf
+bind | split-window -h
+bind - split-window -v
